@@ -19,6 +19,9 @@ package tokenizer
 // - O1
 // - O1Preview
 // - O1Mini
+// - GPT5
+// - GPT5Mini
+// - GPT5Nano
 // - GPT4.1
 // - GPT4o
 // - GPT4
@@ -107,6 +110,9 @@ const (
 	O3                       Model = "o3"
 	O3Mini                   Model = "o3-mini"
 	O4Mini                   Model = "o4-mini"
+	GPT5                     Model = "gpt-5"
+	GPT5Mini                 Model = "gpt-5-mini"
+	GPT5Nano                 Model = "gpt-5-nano"
 	GPT41                    Model = "gpt-4.1"
 	GPT4o                    Model = "gpt-4o"
 	GPT4                     Model = "gpt-4"
@@ -199,7 +205,7 @@ func Get(encoding Encoding) (Codec, error) {
 // is returned.
 func ForModel(model Model) (Codec, error) {
 	switch model {
-	case O1, O1Preview, O1Mini, GPT41, GPT4o, O3, O3Mini, O4Mini:
+	case O1, O1Preview, O1Mini, GPT5, GPT5Mini, GPT5Nano, GPT41, GPT4o, O3, O3Mini, O4Mini:
 		return Get(O200kBase)
 
 	case GPT4, GPT35, GPT35Turbo, TextEmbeddingAda002:
