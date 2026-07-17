@@ -115,7 +115,20 @@ func printEncodings() {
 
 func printModels() {
 	models := []tokenizer.Model{tokenizer.GPT4,
+		tokenizer.O1,
+		tokenizer.O1Preview,
+		tokenizer.O1Mini,
+		tokenizer.O3,
+		tokenizer.O3Mini,
+		tokenizer.O4Mini,
+		tokenizer.GPT5,
+		tokenizer.GPT5Mini,
+		tokenizer.GPT5Nano,
+		tokenizer.GPT41,
+		tokenizer.GPT4o,
+		tokenizer.GPT4,
 		tokenizer.GPT35Turbo,
+		tokenizer.GPT35,
 		tokenizer.TextEmbeddingAda002,
 		tokenizer.TextDavinci003,
 		tokenizer.TextDavinci002,
@@ -144,7 +157,9 @@ func printModels() {
 		tokenizer.CodeSearchBabbageCode001,
 		tokenizer.CodeSearchAdaCode001,
 		tokenizer.TextDavinciEdit001,
-		tokenizer.CodeDavinciEdit001}
+		tokenizer.CodeDavinciEdit001,
+		tokenizer.GPT2,
+	}
 
 	for _, m := range models {
 		fmt.Println(m)
